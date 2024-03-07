@@ -1,0 +1,68 @@
+
+<div class="result-container">
+
+    <div class="left-side">
+        <div class="user-photo">
+          <img [src]="apiData.avatar_url" alt="User Photo">
+        </div>
+        <div class="bio">
+          {{ apiData.bio || 'N/A' }}
+        </div>
+      </div>
+  
+    <div class="user-details">
+        <div class="detail-item">
+            <div class="label-box"><strong>Username:</strong></div>
+            <div class="data-box">{{ apiData.username }}</div>
+          </div>
+          <div class="detail-item">
+            <div class="label-box"><strong>Name:</strong></div>
+            <div class="data-box">{{ apiData.name || 'N/A' }}</div>
+          </div>
+          <div class="detail-item">
+            <div class="label-box"><strong>Location:</strong></div>
+            <div class="data-box">{{ apiData.location || 'N/A' }}</div>
+          </div>
+          <div class="detail-item">
+            <div class="label-box"><strong>Titles:</strong></div>
+            <div class="data-box">
+              <span *ngIf="apiData.titles.length > 0">
+                {{ apiData.titles.join(', ') }}
+              </span>
+              <span *ngIf="apiData.titles.length === 0">N/A</span>
+            </div>
+          </div>
+      <div class="detail-item">
+        <div class="label-box"><strong>Favorite Language:</strong></div>
+        <div class="data-box">{{ apiData['favorite-language'] || 'N/A' }}</div>
+      </div>
+      <div class="detail-item">
+        <div class="label-box"><strong>Total Stars:</strong></div>
+        <div class="data-box">{{ apiData['total-stars'] }}</div>
+      </div>
+      <div class="detail-item">
+        <div class="label-box"><strong>Highest Star Count:</strong></div>
+        <div class="data-box">{{ apiData['highest-starred'] }}</div>
+      </div>
+      <div class="detail-item">
+        <div class="label-box"><strong>Public Repos:</strong></div>
+        <div class="data-box">{{ apiData['public-repos'] }}</div>
+      </div>
+      <div class="detail-item">
+        <div class="label-box"><strong>Perfect Repos:</strong></div>
+        <div class="data-box">{{ apiData['perfect-repos'] }}</div>
+      </div>
+      <div class="detail-item">
+        <div class="label-box"><strong>Followers:</strong></div>
+        <div class="data-box">{{ apiData.followers }}</div>
+      </div>
+      <div class="detail-item">
+        <div class="label-box"><strong>Following:</strong></div>
+        <div class="data-box">{{ apiData.following }}</div>
+      </div>
+
+    </div>
+  </div>
+  
+  
+

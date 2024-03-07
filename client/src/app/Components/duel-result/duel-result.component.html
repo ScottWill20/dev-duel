@@ -1,0 +1,19 @@
+<!-- duel-result.component.html -->
+<div class="duel-result-container">
+    <div *ngIf="duelDataWinner; else noWinner" class="result-boxes">
+      <div class="winner-box">
+        <h3> 🏁 !!WINNER!! 🏁 </h3>
+        <app-inspect-result [apiData]="duelDataWinner"></app-inspect-result>
+      </div>
+      <div class="vs-box">
+        <h3>VS</h3>
+      </div>
+      <div class="loser-box">
+        <h3>😵 LOSER 😵</h3>
+        <app-inspect-result [apiData]="duelDataLoser"></app-inspect-result>
+      </div>
+    </div>
+    <ng-template #noWinner>
+      <p>No winner yet. Duel to find out!</p>
+    </ng-template>
+  </div>

@@ -1,0 +1,39 @@
+.duel-result-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10vh;
+  }
+  
+  .result-boxes {
+    display: flex;
+    align-items: center;
+  }
+  
+  .winner-box,
+  .vs-box,
+  .loser-box {
+    text-align: center;
+  }
+
+  .vs-box {
+    padding: 30px;
+  }
+  
+  .winner-box h3,
+  .loser-box h3 {
+    font-size: 2em; /* Adjust the font size as needed */
+    color: #4caf50; /* Green color for winner */
+    /* Add any additional styles for the winner h3 tag */
+  }
+  
+  .vs-box h3 {
+    font-size: 1.5em;
+    /* Add any additional styles for the VS h3 tag */
+  }
+  
+  .loser-box h3 {
+    font-size: 2em; /* Adjust the font size as needed */
+    color: #e91e63; /* Custom color for loser */
+    /* Add any additional styles for the loser h3 tag */
+  }
